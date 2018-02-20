@@ -1,1 +1,5 @@
+.project
 *sublime*
+*.TODO
+*.todo
+*.directory
