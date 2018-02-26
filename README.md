@@ -1,4 +1,4 @@
-<h1>ndown</h1>
+# ndown
 
 <h2>Required software</h2>
 
@@ -24,6 +24,12 @@ crontab -e
 Crontab should have the execution of download.sh at the desired time (when the time window of available bandwidth begins, ex. night time) and the execution of killer.sh to prevent the download process during the time where bandwidth will be scarce for a long time, ex. early morning.
 
 <h3>Example crontab</h3>
+
+```bash
+#   m h  dom mon dow   command
+    0 23  *   *   *    bash /home/dann1/Projects/CUJAE/download.sh
+    0 8   *   *   *    bash /home/dann1/Projects/CUJAE/killer.sh
+```
 
 <h3>download.conf</h3>
 
