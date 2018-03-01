@@ -27,8 +27,8 @@ Crontab should have the execution of download.sh at the desired time (when the t
 
 ```bash
 #   m h  dom mon dow   command
-    0 23  *   *   *    bash /home/dann1/Projects/CUJAE/download.sh
-    0 8   *   *   *    bash /home/dann1/Projects/CUJAE/killer.sh
+    0 23  *   *   *    bash /opt/ndown/download.sh
+    0 8   *   *   *    bash /opt/ndown/killer.sh
 ```
 
 <h3>download.conf</h3>
