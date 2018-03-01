@@ -1,19 +1,19 @@
 # ndown
 
-<h2>Required software</h2>
+## Required software
 
 Install aria2, wget and youtube-dl
 
-<h3>Ubuntu</h3>
+### Ubuntu
 ```bash
 sudo apt install aria2 wget youtube-dl
 ```
-<h3>Archlinux </h3>
+### Archlinux
 ```bash
 sudo pacman -S aria2 wget youtube-dl
 ```
 
-<h2>Configuration</h2>
+## Configuration
 
 Create a crontab for download schedule. This is not required but it fulfills the purpose of ndown.
 
@@ -23,7 +23,7 @@ crontab -e
 
 Crontab should have the execution of download.sh at the desired time (when the time window of available bandwidth begins, ex. night time) and the execution of killer.sh to prevent the download process during the time where bandwidth will be scarce for a long time, ex. early morning.
 
-<h3>Example crontab</h3>
+### Example crontab
 
 ```bash
 #   m h  dom mon dow   command
@@ -31,11 +31,11 @@ Crontab should have the execution of download.sh at the desired time (when the t
     0 8   *   *   *    bash /opt/ndown/killer.sh
 ```
 
-<h3>download.conf</h3>
+### download.conf
 
 You can configure directory settings and others in **ndown/config/download.conf** . Variable description can be found in the required software manual pages.
 
-<h2>How to use</h2>
+## How to use
 
 Append urls to the .links files in **ndown/inputs** depending on what they are.
 - youtube videos the must be in youtube.links
