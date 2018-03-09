@@ -18,9 +18,8 @@ function downloader {
 	esac
 
 	lista=$(grep -v '^#' < $input_dir/$tarea.links) # avoid lines starting with hashtag
-	for i in $lista; do
-		logger "Downloading $i" $logfile
-		eval $comando  $i &
+	for i in $lista; do		
+		logger "Downloading $i" $logfile && eval $comando  $i  && logger "Finish downloading $i" &
 	done	 
 }
 
