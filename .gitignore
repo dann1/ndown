@@ -5,3 +5,4 @@
 *.directory
 *.log
 *.links
+logs/download.log
