@@ -19,7 +19,7 @@ function downloader {
 
 	lista=$(grep -v '^#' < $input_dir/$tarea.links) # avoid lines starting with hashtag
 	for i in $lista; do		
-		logger "Downloading $i" $logfile && eval $comando  $i  && logger "Finish downloading $i" &
+		logger "Downloading $i" $logfile && eval $comando  $i  && logger "Finished downloading $i"
 	done	 
 }
 
@@ -27,8 +27,8 @@ cd $download_dir
 
 logger "BEGIN" $logfile
 
-downloader youtube
-downloader aria2
-downloader webs
+downloader youtube &
+downloader aria2 &
+downloader webs &
 
 logger "FINISH" $logfile
