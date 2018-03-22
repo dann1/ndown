@@ -10,7 +10,7 @@ function downloader {
 			comando="youtube-dl -r $bandwidth -c -o '%(title)s.%(ext)s' --restrict-filenames"
 			;;
 		webs )
-			comando="wget --limit-rate=amount=$bandwidth -P $web_dir -U $user_agent -e robots=off --continue -r -k --no-parent --page-requisites --convert-links --no-clobber --domain="
+			comando="wget --limit-rate=amount=$bandwidth -P $web_dir -U $user_agent -e robots=off --recursive --no-parent --page-requisites --convert-links"
 			;;		
 		aria2 )
 			comando="aria2c -c --max-download-limit=$bandwidth --max-connection-per-server=$conperserv  --file-allocation=falloc --optimize-concurrent-downloads=true --disk-cache=$cache --async-dns=false"
