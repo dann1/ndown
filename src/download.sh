@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $(dirname $0)/config/download.conf
+source $(dirname $0)/download.conf
 source $(dirname $0)/common.sh
 
 function downloader {
